@@ -13,6 +13,10 @@ class Product(Base):
     CODE = Column(String(13), unique=True, nullable=False)
     NAME = Column(String(50), nullable=False)
     PRICE = Column(Integer, nullable=False)
+    SUPPLIER = Column(String(50),nullable=False) #アプリ事故確認用
+    MANUFACTURER = Column(String(50),nullable=False) #アプリ事故確認用
+    COG = Column(Integer, nullable=False) #アプリ事故確認用
+
 
     details = relationship("TransactionDetail", back_populates="product")
 
